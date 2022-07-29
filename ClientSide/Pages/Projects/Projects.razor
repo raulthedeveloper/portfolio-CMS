@@ -1,0 +1,52 @@
+﻿@page "/projects"
+
+<h3>Projects</h3>
+
+@foreach(var item in projects){
+
+    <ItemRow Title="@item.Name" Image="@item.Image"></ItemRow>
+
+}
+
+
+
+@code {
+
+    private List<ProjectModel> projects = new List<ProjectModel>();
+
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+
+        projects.Add(new ProjectModel
+        {
+            Id = 1,
+            Name = "Project 1",
+            Image = "https:///colibriwp.com/blog/wp-content/uploads/2018/07/banner-redimensionat.jpg\""
+        });
+
+        projects.Add(new ProjectModel
+        {
+            Id = 2,
+            Name = "Project 2",
+            Image = "https:///blog.addthiscdn.com/wp-content/uploads/2018/05/11124555/3-Things-Great-Websites-Have-in-Common1-672x372.png"
+        });
+
+        projects.Add(new ProjectModel
+        {
+            Id = 3,
+            Name = "Project 3",
+            Image = "https:///prod-ripcut-delivery.disney-plus.net/v1/variant/disney/D9DC67628B969C08200C9974D573719C74F8C1AFD33C499EA67D8C7C7A1E5C51/scale?width=1200&aspectRatio=1.78&format=jpeg"
+        });
+
+        projects.Add(new ProjectModel
+        {
+            Id = 3,
+            Name = "Project 3",
+            Image = "https:///prod-ripcut-delivery.disney-plus.net/v1/variant/disney/D9DC67628B969C08200C9974D573719C74F8C1AFD33C499EA67D8C7C7A1E5C51/scale?width=1200&aspectRatio=1.78&format=jpeg"
+        });
+    }
+
+}
+

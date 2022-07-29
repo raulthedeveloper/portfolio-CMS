@@ -1,0 +1,54 @@
+﻿
+<div class="container">
+
+    <div class="row d-flex justify-content-center ">
+        <div class="col-7 p-3 py-5 rounded shadow">
+            <EditForm class="m-auto" Model="Model" OnValidSubmit="HandleSubmit">
+
+
+                <InputField Label="Email">
+                    <Control>
+                        <InputText class="form-control" id="email" @bind-Value="Model.Email" />
+                    </Control>
+                </InputField>
+
+                
+                <InputField Lable="Message">
+                    <Control>
+                        <InputTextArea @bind-Value="Model.Message" class="form-control" id="message" rows="7"></InputTextArea>
+                    </Control>
+                </InputField>
+                
+                <button class="btn btn-success mt-5" type="submit">Submit</button>
+
+                <div class="mt-3">
+                    <DataAnnotationsValidator />
+                    <ValidationSummary />
+                </div>
+
+
+            </EditForm>
+        </div>
+    </div>
+</div>
+
+
+
+
+@code {
+
+
+
+    [Parameter]
+    public IFormContact Model { get; set; }
+
+    private void HandleSubmit()
+    {
+
+        Console.WriteLine("form has been submit");
+
+        Console.WriteLine($"Email:{Model.Email}  Password:{Model.Message}");
+    }
+
+}
+

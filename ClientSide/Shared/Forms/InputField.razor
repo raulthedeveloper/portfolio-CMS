@@ -1,0 +1,15 @@
+﻿<div class="form-group">
+    <label>@Label</label>
+    @Control
+</div>
+
+@code {
+
+    [Parameter]
+    public string Label { get; set; }
+
+    [Parameter]
+    public RenderFragment Control { get; set; }
+
+}
+

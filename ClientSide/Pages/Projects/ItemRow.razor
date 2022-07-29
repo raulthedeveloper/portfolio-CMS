@@ -1,0 +1,50 @@
+﻿
+
+    <div class="row shadow p-3 mb-5 bg-white rounded">
+        <div class="col-md-8">
+            <h2>@Title</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+                molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+                numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
+                optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis
+            </p>
+            <button class="btn btn-success">See More</button>
+
+            <hr />
+
+            <div class="d-flex flex-column">
+                <small>Technologies</small>
+                <div>
+                    <input class="btn btn-primary" type="reset" value="Html">
+                    <input class="btn btn-primary" type="reset" value="Css">
+                    <input class="btn btn-primary" type="reset" value="PHP">
+                </div>
+                
+            </div>
+        </div>
+        <div class="col-md-4">
+            
+
+            <img class="img-fluid" src="@Image" />
+
+
+            
+
+        </div>
+    </div>
+
+
+@code {
+
+    [Parameter]
+    public string? Image { get; set; }
+
+    [Parameter]
+    public string? Title { get; set; }
+
+    [Parameter]
+    public string? Description { get; set; }
+
+}
+
